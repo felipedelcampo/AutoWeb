@@ -69,7 +69,7 @@
   </Entity>
   <Entity gr:x="210" gr:y="640" id="ent4" name="Material" duration="persistent" attributeOrder="ent4#att4 ent4#att55">
     <Attribute id="ent4#att4" key="true" name="oid" type="integer"/>
-    <Attribute id="ent4#att55" name="dataPostagem" type="date"/>
+    <Attribute id="ent4#att55" name="dataPostagen" type="date"/>
   </Entity>
   <Entity gr:x="60" gr:y="760" id="ent5" name="Agenda" duration="persistent" attributeOrder="ent5#att5 ent5#att48 ent5#att49 ent5#att50 ent5#att51">
     <Attribute id="ent5#att5" key="true" name="oid" type="integer"/>
