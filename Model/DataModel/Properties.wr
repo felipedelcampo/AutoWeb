@@ -46,162 +46,235 @@
       <db:JoinColumn attribute="moduleOID" name="module_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="AutoWeb" type="MySQL (InnoDB)" url="jdbc:mysql://localhost/AutoWeb" username="root" password="YWRtaW4=" cryptedPassword="true" jndiName="" connectionCount="5" runtimeType="" runtimeURL="" runtimeUsername="" runtimePassword="" runtimeCryptedPassword=""/>
-  <Entity gr:x="74" gr:y="368" id="ent1" name="Instrutor" duration="persistent" attributeOrder="ent1#att1 ent1#att31 ent1#att33 ent1#att34 ent1#att35 ent1#att36">
-    <Attribute id="ent1#att1" key="true" name="oid" type="integer"/>
-    <Attribute id="ent1#att31" name="nome" type="string"/>
-    <Attribute id="ent1#att33" name="cpf" type="string"/>
-    <Attribute id="ent1#att34" name="telene" type="string"/>
-    <Attribute id="ent1#att35" name="celula" type="string"/>
-    <Attribute id="ent1#att36" name="email" type="string"/>
+  <db:Database id="db1" name="AutoWeb" type="MySQL (InnoDB)" url="jdbc:mysql://localhost/AutoWeb" username="root" password="cm9vdA==" cryptedPassword="true" jndiName="" connectionCount="5" runtimeType="" runtimeURL="" runtimeUsername="" runtimePassword="" runtimeCryptedPassword="">
+  </db:Database>
+  <Entity gr:x="74" gr:y="368" id="ent1" name="Instrutor" duration="persistent" attributeOrder="ent1#att1 ent1#att31 ent1#att33 ent1#att34 ent1#att35 ent1#att36" db:database="db1" db:table="instrutor">
+    <Attribute id="ent1#att1" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent1#att31" name="nome" type="string" db:column="nome"/>
+    <Attribute id="ent1#att33" name="cpf" type="string" db:column="cpf"/>
+    <Attribute id="ent1#att34" name="telene" type="string" db:column="telene"/>
+    <Attribute id="ent1#att35" name="celula" type="string" db:column="celula"/>
+    <Attribute id="ent1#att36" name="email" type="string" db:column="email"/>
   </Entity>
-  <Entity gr:x="330" gr:y="330" id="ent2" name="Simulado" duration="persistent">
-    <Attribute id="ent2#att2" key="true" name="oid" type="integer"/>
+  <Entity gr:x="330" gr:y="330" id="ent2" name="Simulado" duration="persistent" db:database="db1" db:table="simulado">
+    <Attribute id="ent2#att2" key="true" name="oid" type="integer" db:column="oid"/>
   </Entity>
-  <Entity gr:x="590" gr:y="350" id="ent3" name="Aluno" duration="persistent" attributeOrder="ent3#att3 ent3#att11 ent3#att12 ent3#att13 ent3#att18 ent3#att20 ent3#att21">
-    <Attribute id="ent3#att3" key="true" name="oid" type="integer"/>
-    <Attribute id="ent3#att11" name="nome" type="string"/>
-    <Attribute id="ent3#att12" name="cpf" type="string"/>
-    <Attribute id="ent3#att13" name="dataNascimento" type="date"/>
-    <Attribute id="ent3#att18" name="email" type="string"/>
-    <Attribute id="ent3#att20" name="telefone" type="string"/>
-    <Attribute id="ent3#att21" name="celular" type="string"/>
+  <Entity gr:x="590" gr:y="350" id="ent3" name="Aluno" duration="persistent" attributeOrder="ent3#att3 ent3#att11 ent3#att12 ent3#att13 ent3#att18 ent3#att20 ent3#att21" db:database="db1" db:table="aluno">
+    <Attribute id="ent3#att3" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent3#att11" name="nome" type="string" db:column="nome"/>
+    <Attribute id="ent3#att12" name="cpf" type="string" db:column="cpf"/>
+    <Attribute id="ent3#att13" name="dataNascimento" type="date" db:column="datanascimento"/>
+    <Attribute id="ent3#att18" name="email" type="string" db:column="email"/>
+    <Attribute id="ent3#att20" name="telefone" type="string" db:column="telefone"/>
+    <Attribute id="ent3#att21" name="celular" type="string" db:column="celular"/>
   </Entity>
-  <Entity gr:x="210" gr:y="640" id="ent4" name="Material" duration="persistent" attributeOrder="ent4#att4 ent4#att55">
-    <Attribute id="ent4#att4" key="true" name="oid" type="integer"/>
-    <Attribute id="ent4#att55" name="dataPostagem" type="date"/>
+  <Entity gr:x="210" gr:y="640" id="ent4" name="Material" duration="persistent" attributeOrder="ent4#att4 ent4#att55" db:database="db1" db:table="material">
+    <Attribute id="ent4#att4" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent4#att55" name="dataPostagem" type="date" db:column="datapostagem"/>
   </Entity>
-  <Entity gr:x="60" gr:y="760" id="ent5" name="Agenda" duration="persistent" attributeOrder="ent5#att5 ent5#att48 ent5#att49 ent5#att50 ent5#att51">
-    <Attribute id="ent5#att5" key="true" name="oid" type="integer"/>
-    <Attribute id="ent5#att48" name="data" type="string"/>
-    <Attribute id="ent5#att49" name="horario" type="time"/>
-    <Attribute id="ent5#att50" name="descricao" type="string"/>
-    <Attribute id="ent5#att51" name="tipo" type="string"/>
+  <Entity gr:x="60" gr:y="760" id="ent5" name="Agenda" duration="persistent" attributeOrder="ent5#att5 ent5#att48 ent5#att49 ent5#att50 ent5#att51" db:database="db1" db:table="agenda">
+    <Attribute id="ent5#att5" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent5#att48" name="data" type="string" db:column="data"/>
+    <Attribute id="ent5#att49" name="horario" type="time" db:column="horario"/>
+    <Attribute id="ent5#att50" name="descricao" type="string" db:column="descricao"/>
+    <Attribute id="ent5#att51" name="tipo" type="string" db:column="tipo"/>
   </Entity>
-  <Entity gr:x="370" gr:y="770" id="ent6" name="Compromisso" duration="persistent" attributeOrder="ent6#att6 ent6#att14 ent6#att15 ent6#att16">
-    <Attribute id="ent6#att6" key="true" name="oid" type="integer"/>
-    <Attribute id="ent6#att14" name="descricao" type="string"/>
-    <Attribute id="ent6#att15" name="data" type="date"/>
-    <Attribute id="ent6#att16" name="horario" type="time"/>
+  <Entity gr:x="370" gr:y="770" id="ent6" name="Compromisso" duration="persistent" attributeOrder="ent6#att6 ent6#att14 ent6#att15 ent6#att16" db:database="db1" db:table="compromisso">
+    <Attribute id="ent6#att6" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent6#att14" name="descricao" type="string" db:column="descricao"/>
+    <Attribute id="ent6#att15" name="data" type="date" db:column="data"/>
+    <Attribute id="ent6#att16" name="horario" type="time" db:column="horario"/>
   </Entity>
-  <Entity gr:x="60" gr:y="990" id="ent7" name="Feriados" duration="persistent" attributeOrder="ent7#att7 ent7#att9 ent7#att10">
-    <Attribute id="ent7#att7" key="true" name="oid" type="integer"/>
-    <Attribute id="ent7#att9" name="descricao" type="string"/>
-    <Attribute id="ent7#att10" name="data" type="date"/>
+  <Entity gr:x="60" gr:y="990" id="ent7" name="Feriados" duration="persistent" attributeOrder="ent7#att7 ent7#att9 ent7#att10" db:database="db1" db:table="feriados">
+    <Attribute id="ent7#att7" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent7#att9" name="descricao" type="string" db:column="descricao"/>
+    <Attribute id="ent7#att10" name="data" type="date" db:column="data"/>
   </Entity>
-  <Relationship id="rel1" name="Instrutor_Simulado" sourceEntity="ent1" targetEntity="ent2">
-    <RelationshipRole1 id="rel1#role1" name="InstrutorToSimulado" maxCard="N"/>
-    <RelationshipRole2 id="rel1#role2" name="SimuladoToInstrutor" maxCard="1"/>
+  <Relationship id="rel1" name="Instrutor_Simulado" sourceEntity="ent1" targetEntity="ent2" db:database="db1" db:table="simulado">
+    <RelationshipRole1 id="rel1#role1" name="InstrutorToSimulado" maxCard="N">
+      <db:JoinColumn attribute="ent1#att1" name="instrutor_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel1#role2" name="SimuladoToInstrutor" maxCard="1">
+      <db:JoinColumn attribute="ent2#att2" name="oid"/>
+    </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel2" name="Instrutor_Material" sourceEntity="ent1" targetEntity="ent4">
-    <RelationshipRole1 id="rel2#role3" name="InstrutorToMaterial" maxCard="N"/>
-    <RelationshipRole2 id="rel2#role4" name="MaterialToInstrutor" maxCard="N"/>
+  <Relationship id="rel2" name="Instrutor_Material" sourceEntity="ent1" targetEntity="ent4" db:database="db1" db:table="instrutor_material">
+    <RelationshipRole1 id="rel2#role3" name="InstrutorToMaterial" maxCard="N">
+      <db:JoinColumn attribute="ent1#att1" name="instrutor_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel2#role4" name="MaterialToInstrutor" maxCard="N">
+      <db:JoinColumn attribute="ent4#att4" name="material_oid"/>
+    </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel3" name="Material_Aluno" sourceEntity="ent4" targetEntity="ent3">
-    <RelationshipRole1 id="rel3#role5" name="MaterialToAluno" maxCard="N"/>
-    <RelationshipRole2 id="rel3#role6" name="AlunoToMaterial" maxCard="N"/>
+  <Relationship id="rel3" name="Material_Aluno" sourceEntity="ent4" targetEntity="ent3" db:database="db1" db:table="material_aluno">
+    <RelationshipRole1 id="rel3#role5" name="MaterialToAluno" maxCard="N">
+      <db:JoinColumn attribute="ent4#att4" name="material_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel3#role6" name="AlunoToMaterial" maxCard="N">
+      <db:JoinColumn attribute="ent3#att3" name="aluno_oid"/>
+    </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel4" name="Simulado_Aluno" sourceEntity="ent2" targetEntity="ent3">
-    <RelationshipRole1 id="rel4#role7" name="SimuladoToAluno" maxCard="N"/>
-    <RelationshipRole2 id="rel4#role8" name="AlunoToSimulado" maxCard="N"/>
+  <Relationship id="rel4" name="Simulado_Aluno" sourceEntity="ent2" targetEntity="ent3" db:database="db1" db:table="simulado_aluno">
+    <RelationshipRole1 id="rel4#role7" name="SimuladoToAluno" maxCard="N">
+      <db:JoinColumn attribute="ent2#att2" name="simulado_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel4#role8" name="AlunoToSimulado" maxCard="N">
+      <db:JoinColumn attribute="ent3#att3" name="aluno_oid"/>
+    </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="280" gr:y="460" id="ent8" name="Pontua&#231;&#227;o" duration="persistent" attributeOrder="ent8#att8 ent8#att17 ent8#att46">
-    <Attribute id="ent8#att8" key="true" name="oid" type="integer"/>
-    <Attribute id="ent8#att17" name="valor" type="float"/>
-    <Attribute id="ent8#att46" name="data" type="date"/>
+  <Entity gr:x="280" gr:y="460" id="ent8" name="Pontua&#231;&#227;o" duration="persistent" attributeOrder="ent8#att8 ent8#att17 ent8#att46" db:database="db1" db:table="pontuacao">
+    <Attribute id="ent8#att8" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent8#att17" name="valor" type="float" db:column="valor"/>
+    <Attribute id="ent8#att46" name="data" type="date" db:column="data"/>
   </Entity>
-  <Relationship id="rel5" name="Aluno_Pontua&#231;&#227;o" sourceEntity="ent3" targetEntity="ent8">
-    <RelationshipRole1 id="rel5#role9" name="AlunoToPontua&#231;&#227;o" maxCard="N"/>
-    <RelationshipRole2 id="rel5#role10" name="Pontua&#231;&#227;oToAluno" maxCard="N"/>
+  <Relationship id="rel5" name="Aluno_Pontua&#231;&#227;o" sourceEntity="ent3" targetEntity="ent8" db:database="db1" db:table="aluno_pontuacao">
+    <RelationshipRole1 id="rel5#role9" name="AlunoToPontua&#231;&#227;o" maxCard="N">
+      <db:JoinColumn attribute="ent3#att3" name="aluno_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel5#role10" name="Pontua&#231;&#227;oToAluno" maxCard="N">
+      <db:JoinColumn attribute="ent8#att8" name="pontuacao_oid"/>
+    </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel6" name="Aluno_Compromisso" sourceEntity="ent3" targetEntity="ent6">
-    <RelationshipRole1 id="rel6#role11" name="AlunoToCompromisso" maxCard="N"/>
-    <RelationshipRole2 id="rel6#role12" name="CompromissoToAluno" maxCard="N"/>
+  <Relationship id="rel6" name="Aluno_Compromisso" sourceEntity="ent3" targetEntity="ent6" db:database="db1" db:table="aluno_compromisso">
+    <RelationshipRole1 id="rel6#role11" name="AlunoToCompromisso" maxCard="N">
+      <db:JoinColumn attribute="ent3#att3" name="aluno_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel6#role12" name="CompromissoToAluno" maxCard="N">
+      <db:JoinColumn attribute="ent6#att6" name="compromisso_oid"/>
+    </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel7" name="Compromisso_Agenda" sourceEntity="ent6" targetEntity="ent5">
-    <RelationshipRole1 id="rel7#role13" name="CompromissoToAgenda" maxCard="1"/>
-    <RelationshipRole2 id="rel7#role14" name="AgendaToCompromisso" maxCard="1"/>
+  <Relationship id="rel7" name="Compromisso_Agenda" sourceEntity="ent6" targetEntity="ent5" db:database="db1" db:table="agenda">
+    <RelationshipRole1 id="rel7#role13" name="CompromissoToAgenda" maxCard="1">
+      <db:JoinColumn attribute="ent6#att6" name="compromisso_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel7#role14" name="AgendaToCompromisso" maxCard="1">
+      <db:JoinColumn attribute="ent5#att5" name="oid"/>
+    </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel8" name="Agenda_Feriados" sourceEntity="ent5" targetEntity="ent7">
-    <RelationshipRole1 id="rel8#role15" name="AgendaToFeriados" maxCard="N"/>
-    <RelationshipRole2 id="rel8#role16" name="FeriadosToAgenda" maxCard="N"/>
+  <Relationship id="rel8" name="Agenda_Feriados" sourceEntity="ent5" targetEntity="ent7" db:database="db1" db:table="agenda_feriados">
+    <RelationshipRole1 id="rel8#role15" name="AgendaToFeriados" maxCard="N">
+      <db:JoinColumn attribute="ent5#att5" name="agenda_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel8#role16" name="FeriadosToAgenda" maxCard="N">
+      <db:JoinColumn attribute="ent7#att7" name="feriados_oid"/>
+    </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="900" gr:y="260" id="ent9" name="Endereco" duration="persistent" attributeOrder="ent9#att19 ent9#att22 ent9#att23 ent9#att24">
-    <Attribute id="ent9#att19" key="true" name="oid" type="integer"/>
-    <Attribute id="ent9#att22" name="logradouro" type="string"/>
-    <Attribute id="ent9#att23" name="bairro" type="string"/>
-    <Attribute id="ent9#att24" name="tipoLogradouro" type="string"/>
+  <Entity gr:x="900" gr:y="260" id="ent9" name="Endereco" duration="persistent" attributeOrder="ent9#att19 ent9#att22 ent9#att23 ent9#att24" db:database="db1" db:table="endereco">
+    <Attribute id="ent9#att19" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent9#att22" name="logradouro" type="string" db:column="logradouro"/>
+    <Attribute id="ent9#att23" name="bairro" type="string" db:column="bairro"/>
+    <Attribute id="ent9#att24" name="tipoLogradouro" type="string" db:column="tipologradouro"/>
   </Entity>
-  <Relationship id="rel9" name="Aluno_Endereco" sourceEntity="ent3" targetEntity="ent9">
-    <RelationshipRole1 id="rel9#role17" name="AlunoToEndereco" maxCard="N"/>
-    <RelationshipRole2 id="rel9#role18" name="EnderecoToAluno" maxCard="1"/>
+  <Relationship id="rel9" name="Aluno_Endereco" sourceEntity="ent3" targetEntity="ent9" db:database="db1" db:table="endereco">
+    <RelationshipRole1 id="rel9#role17" name="AlunoToEndereco" maxCard="N">
+      <db:JoinColumn attribute="ent3#att3" name="aluno_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel9#role18" name="EnderecoToAluno" maxCard="1">
+      <db:JoinColumn attribute="ent9#att19" name="oid"/>
+    </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="930" gr:y="530" id="ent10" name="Cidade" duration="persistent" attributeOrder="ent10#att25 ent10#att26">
-    <Attribute id="ent10#att25" key="true" name="oid" type="integer"/>
-    <Attribute id="ent10#att26" name="nome" type="string"/>
+  <Entity gr:x="930" gr:y="530" id="ent10" name="Cidade" duration="persistent" attributeOrder="ent10#att25 ent10#att26" db:database="db1" db:table="cidade">
+    <Attribute id="ent10#att25" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent10#att26" name="nome" type="string" db:column="nome"/>
   </Entity>
-  <Entity gr:x="1150" gr:y="530" id="ent11" name="Estado" duration="persistent" attributeOrder="ent11#att27 ent11#att28">
-    <Attribute id="ent11#att27" key="true" name="oid" type="integer"/>
-    <Attribute id="ent11#att28" name="nome" type="string"/>
+  <Entity gr:x="1150" gr:y="530" id="ent11" name="Estado" duration="persistent" attributeOrder="ent11#att27 ent11#att28" db:database="db1" db:table="estado">
+    <Attribute id="ent11#att27" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent11#att28" name="nome" type="string" db:column="nome"/>
   </Entity>
-  <Entity gr:x="1140" gr:y="260" id="ent12" name="Pais" duration="persistent" attributeOrder="ent12#att29 ent12#att30">
-    <Attribute id="ent12#att29" key="true" name="oid" type="integer"/>
-    <Attribute id="ent12#att30" name="nome" type="string"/>
+  <Entity gr:x="1140" gr:y="260" id="ent12" name="Pais" duration="persistent" attributeOrder="ent12#att29 ent12#att30" db:database="db1" db:table="pais">
+    <Attribute id="ent12#att29" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent12#att30" name="nome" type="string" db:column="nome"/>
   </Entity>
-  <Relationship id="rel10" name="Endereco_Cidade" sourceEntity="ent9" targetEntity="ent10">
-    <RelationshipRole1 id="rel10#role19" name="EnderecoToCidade" maxCard="N"/>
-    <RelationshipRole2 id="rel10#role20" name="CidadeToEndereco" maxCard="1"/>
+  <Relationship id="rel10" name="Endereco_Cidade" sourceEntity="ent9" targetEntity="ent10" db:database="db1" db:table="cidade">
+    <RelationshipRole1 id="rel10#role19" name="EnderecoToCidade" maxCard="N">
+      <db:JoinColumn attribute="ent9#att19" name="endereco_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel10#role20" name="CidadeToEndereco" maxCard="1">
+      <db:JoinColumn attribute="ent10#att25" name="oid"/>
+    </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel11" name="Cidade_Estado" sourceEntity="ent10" targetEntity="ent11">
-    <RelationshipRole1 id="rel11#role21" name="CidadeToEstado" maxCard="1"/>
-    <RelationshipRole2 id="rel11#role22" name="EstadoToCidade" maxCard="N"/>
+  <Relationship id="rel11" name="Cidade_Estado" sourceEntity="ent10" targetEntity="ent11" db:database="db1" db:table="cidade">
+    <RelationshipRole1 id="rel11#role21" name="CidadeToEstado" maxCard="1">
+      <db:JoinColumn attribute="ent10#att25" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel11#role22" name="EstadoToCidade" maxCard="N">
+      <db:JoinColumn attribute="ent11#att27" name="estado_oid"/>
+    </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel12" name="Estado_Pais" sourceEntity="ent11" targetEntity="ent12">
-    <RelationshipRole1 id="rel12#role23" name="EstadoToPais" maxCard="N"/>
-    <RelationshipRole2 id="rel12#role24" name="PaisToEstado" maxCard="1"/>
+  <Relationship id="rel12" name="Estado_Pais" sourceEntity="ent11" targetEntity="ent12" db:database="db1" db:table="pais">
+    <RelationshipRole1 id="rel12#role23" name="EstadoToPais" maxCard="N">
+      <db:JoinColumn attribute="ent11#att27" name="estado_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel12#role24" name="PaisToEstado" maxCard="1">
+      <db:JoinColumn attribute="ent12#att29" name="oid"/>
+    </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="220" gr:y="-20" id="ent13" name="Questao" duration="persistent" attributeOrder="ent13#att37 ent13#att32 ent13#att39 ent13#att40 ent13#att41 ent13#att42 ent13#att43 ent13#att44 ent13#att45">
-    <Attribute id="ent13#att37" key="true" name="oid" type="integer"/>
-    <Attribute id="ent13#att32" name="enunciado" type="string"/>
-    <Attribute id="ent13#att39" name="valor" type="float"/>
-    <Attribute id="ent13#att40" name="alternativaA" type="string"/>
-    <Attribute id="ent13#att41" name="alternativaB" type="string"/>
-    <Attribute id="ent13#att42" name="alternativaC" type="string"/>
-    <Attribute id="ent13#att43" name="alternativaD" type="string"/>
-    <Attribute id="ent13#att44" name="alternativaE" type="string"/>
-    <Attribute id="ent13#att45" name="resposta" type="string"/>
+  <Entity gr:x="220" gr:y="-20" id="ent13" name="Questao" duration="persistent" attributeOrder="ent13#att37 ent13#att32 ent13#att39 ent13#att40 ent13#att41 ent13#att42 ent13#att43 ent13#att44 ent13#att45" db:database="db1" db:table="questao">
+    <Attribute id="ent13#att37" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent13#att32" name="enunciado" type="string" db:column="enunciado"/>
+    <Attribute id="ent13#att39" name="valor" type="float" db:column="valor"/>
+    <Attribute id="ent13#att40" name="alternativaA" type="string" db:column="alternativaa"/>
+    <Attribute id="ent13#att41" name="alternativaB" type="string" db:column="alternativab"/>
+    <Attribute id="ent13#att42" name="alternativaC" type="string" db:column="alternativac"/>
+    <Attribute id="ent13#att43" name="alternativaD" type="string" db:column="alternativad"/>
+    <Attribute id="ent13#att44" name="alternativaE" type="string" db:column="alternativae"/>
+    <Attribute id="ent13#att45" name="resposta" type="string" db:column="resposta"/>
   </Entity>
-  <Entity gr:x="600" gr:y="90" id="ent14" name="Resposta" duration="persistent" attributeOrder="ent14#att38 ent14#att47">
-    <Attribute id="ent14#att38" key="true" name="oid" type="integer"/>
-    <Attribute id="ent14#att47" name="resposta" type="string"/>
+  <Entity gr:x="600" gr:y="90" id="ent14" name="Resposta" duration="persistent" attributeOrder="ent14#att38 ent14#att47" db:database="db1" db:table="resposta">
+    <Attribute id="ent14#att38" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent14#att47" name="resposta" type="string" db:column="resposta"/>
   </Entity>
-  <Relationship id="rel13" name="Questao_Simulado" sourceEntity="ent13" targetEntity="ent2">
-    <RelationshipRole1 id="rel13#role25" name="QuestaoToSimulado" maxCard="1"/>
-    <RelationshipRole2 id="rel13#role26" name="SimuladoToQuestao" maxCard="N"/>
+  <Relationship id="rel13" name="Questao_Simulado" sourceEntity="ent13" targetEntity="ent2" db:database="db1" db:table="questao">
+    <RelationshipRole1 id="rel13#role25" name="QuestaoToSimulado" maxCard="1">
+      <db:JoinColumn attribute="ent13#att37" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel13#role26" name="SimuladoToQuestao" maxCard="N">
+      <db:JoinColumn attribute="ent2#att2" name="simulado_oid"/>
+    </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel14" name="Questao_Resposta" sourceEntity="ent13" targetEntity="ent14">
-    <RelationshipRole1 id="rel14#role27" name="QuestaoToResposta" maxCard="N"/>
-    <RelationshipRole2 id="rel14#role28" name="RespostaToQuestao" maxCard="1"/>
+  <Relationship id="rel14" name="Questao_Resposta" sourceEntity="ent13" targetEntity="ent14" db:database="db1" db:table="resposta">
+    <RelationshipRole1 id="rel14#role27" name="QuestaoToResposta" maxCard="N">
+      <db:JoinColumn attribute="ent13#att37" name="questao_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel14#role28" name="RespostaToQuestao" maxCard="1">
+      <db:JoinColumn attribute="ent14#att38" name="oid"/>
+    </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel15" name="Resposta_Aluno" sourceEntity="ent14" targetEntity="ent3">
-    <RelationshipRole1 id="rel15#role29" name="RespostaToAluno" maxCard="1"/>
-    <RelationshipRole2 id="rel15#role30" name="AlunoToResposta" maxCard="N"/>
+  <Relationship id="rel15" name="Resposta_Aluno" sourceEntity="ent14" targetEntity="ent3" db:database="db1" db:table="resposta">
+    <RelationshipRole1 id="rel15#role29" name="RespostaToAluno" maxCard="1">
+      <db:JoinColumn attribute="ent14#att38" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel15#role30" name="AlunoToResposta" maxCard="N">
+      <db:JoinColumn attribute="ent3#att3" name="aluno_oid"/>
+    </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel16" name="Simulado_Pontua&#231;&#227;o" sourceEntity="ent2" targetEntity="ent8">
-    <RelationshipRole1 id="rel16#role31" name="SimuladoToPontua&#231;&#227;o" maxCard="N"/>
-    <RelationshipRole2 id="rel16#role32" name="Pontua&#231;&#227;oToSimulado" maxCard="N"/>
+  <Relationship id="rel16" name="Simulado_Pontua&#231;&#227;o" sourceEntity="ent2" targetEntity="ent8" db:database="db1" db:table="simulado_pontuacao">
+    <RelationshipRole1 id="rel16#role31" name="SimuladoToPontua&#231;&#227;o" maxCard="N">
+      <db:JoinColumn attribute="ent2#att2" name="simulado_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel16#role32" name="Pontua&#231;&#227;oToSimulado" maxCard="N">
+      <db:JoinColumn attribute="ent8#att8" name="pontuacao_oid"/>
+    </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="610" gr:y="670" id="ent15" name="Aviso" duration="persistent" attributeOrder="ent15#att52 ent15#att53 ent15#att54">
-    <Attribute id="ent15#att52" key="true" name="oid" type="integer"/>
-    <Attribute id="ent15#att53" name="mensagem" type="string"/>
-    <Attribute id="ent15#att54" name="periodo" type="string"/>
+  <Entity gr:x="610" gr:y="670" id="ent15" name="Aviso" duration="persistent" attributeOrder="ent15#att52 ent15#att53 ent15#att54" db:database="db1" db:table="aviso">
+    <Attribute id="ent15#att52" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent15#att53" name="mensagem" type="string" db:column="mensagem"/>
+    <Attribute id="ent15#att54" name="periodo" type="string" db:column="periodo"/>
   </Entity>
-  <Relationship id="rel18" name="Aluno_Aviso" sourceEntity="ent3" targetEntity="ent15">
-    <RelationshipRole1 id="rel18#role35" name="AlunoToAviso" maxCard="N"/>
-    <RelationshipRole2 id="rel18#role36" name="AvisoToAluno" maxCard="N"/>
+  <Relationship id="rel18" name="Aluno_Aviso" sourceEntity="ent3" targetEntity="ent15" db:database="db1" db:table="aluno_aviso">
+    <RelationshipRole1 id="rel18#role35" name="AlunoToAviso" maxCard="N">
+      <db:JoinColumn attribute="ent3#att3" name="aluno_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel18#role36" name="AvisoToAluno" maxCard="N">
+      <db:JoinColumn attribute="ent15#att52" name="aviso_oid"/>
+    </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel19" name="Instrutor_Agenda" sourceEntity="ent1" targetEntity="ent5">
-    <RelationshipRole1 id="rel19#role37" name="InstrutorToAgenda" maxCard="N"/>
-    <RelationshipRole2 id="rel19#role38" name="AgendaToInstrutor" maxCard="1"/>
+  <Relationship id="rel19" name="Instrutor_Agenda" sourceEntity="ent1" targetEntity="ent5" db:database="db1" db:table="agenda">
+    <RelationshipRole1 id="rel19#role37" name="InstrutorToAgenda" maxCard="N">
+      <db:JoinColumn attribute="ent1#att1" name="instrutor_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel19#role38" name="AgendaToInstrutor" maxCard="1">
+      <db:JoinColumn attribute="ent5#att5" name="oid"/>
+    </RelationshipRole2>
   </Relationship>
 </DataModel>
